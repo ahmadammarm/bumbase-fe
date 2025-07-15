@@ -9,13 +9,12 @@ import { useMutation } from '@tanstack/react-query';
  */
 export const useRegister = () => {
 
+    const RegisterRequest = async (data: RegisterRequestType) => {
+        const response = await API.post('/api/v1/auth/signup', data);
+        return response.data;
+    }
+
     return useMutation({
-
-        mutationFn: async (data: RegisterRequestType) => {
-
-            const response = await API.post('/api/register', data);
-
-            return response.data;
-        }
+        mutationFn: RegisterRequest
     });
 };

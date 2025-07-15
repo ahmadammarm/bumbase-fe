@@ -1,11 +1,8 @@
 /* eslint-disable react-refresh/only-export-components */
 import React, { createContext, useState, useEffect, type ReactNode } from 'react';
 import Cookies from 'js-cookie';
+import type { AuthContextType } from '@/types/AuthContextType';
 
-interface AuthContextType {
-    isAuthenticated: boolean;
-    setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
 

@@ -32,4 +32,10 @@ const Register: FC = () => {
         })
     }
 
+    return (
+        <div>
+
+        </div>
+    )
+
 }
